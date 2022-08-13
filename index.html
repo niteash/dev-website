@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>DEV SKETCH</title>
+</head>
+    <style>
+
+@media only screen and (max-width: 600px){
+
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            
+            nav a{
+                margin: auto;
+            }
+
+            .pf{
+                margin: 20px;
+            }
+
+            #founder{
+               min-width:auto;
+                min-height:auto;
+            }
+        }
+
+        @media only screen and (max-width:1030px){
+            .container{
+                display:flex;
+                flex-wrap: wrap;
+            }
+        }
+        @media only screen and (max-width:1160px){
+            .container{
+                display:flex;
+                flex-wrap: wrap;
+            }
+        }
+        @media only screen and (max-width:500px){
+            #founder{
+               min-width:auto;
+                min-height:auto;
+            }
+        }
+
+        @media only screen and (max-width:700px){
+            .email{
+                font-size: 10px;
+            }
+        }
+        @media only screen and (max-width:600px){
+            .foot a{
+                font-size: 10px;
+            }
+        }
+        @media only screen and (max-width:400px){
+            .foot a{
+                font-size: 8px;
+            }
+            .email{
+                font-size: 8px;
+            }
+        }
+        @media only screen and (max-width:700px){
+            nav{
+                position: relative;;
+                text-align: center;
+            }
+        }
+
+       
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color:#272727;
+            color: black;
+            max-height: 100%;
+            margin: 0;
+            font-family: ui-monospace;
+            
+        }
+        header{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
+            background-color:#272727;
+            padding: 40px;
+        }
+        header p{
+            font-size: 30px;
+            font-weight: 800;
+            color: whitesmoke;
+            text-align: center;
+            transition: transform 2s;
+        }
+
+        header p:hover{
+            transform: rotateY(180deg);
+        
+        }
+
+        nav{
+            background-color: #272727;
+            padding: 20px;
+            transition: ease-in-out 0.8s;
+
+
+            
+        }
+        nav a{
+            font-family: 'Alumni Sans Pinstripe', sans-serif;
+            margin-left: 20px;
+            transition: ease-in-out 0.8s;
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 10px 10px 10px 10px;
+            text-align: center;
+            font-weight: 700;
+            
+        }
+        nav a:hover{
+            transition: ease-in-out 0.8s;
+            background-color:#ffe400;
+            color:black;
+            border-radius: 10px;
+            border: none;
+            width: 10px;
+        
+        }
+
+        .title{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: whitesmoke;
+            font-weight: 700;
+            font-size: 25px;
+            quotes: "'" "'";
+            text-align: center;
+            margin: 5px;
+        }
+
+        .container{
+            transition: ease-in-out 0.5s;
+            display: flex;
+            flex-direction: row;
+            width:100%;
+            height: auto;
+            background-color:#272727;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            
+            max-width: 100%;
+            height: 320px;
+           
+        }
+        h4{
+          font-size: 20px;
+          color:whitesmoke;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          font-family: ui-monospace;
+          margin: 0px;
+          opacity: 0;
+
+
+        }
+        .card{
+            margin: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            max-width: 100%;
+            height: auto;
+            background-color:#ffe400;
+            overflow: hidden;
+            transition: ease-in-out 0.5s;
+
+            
+        }
+        .card:hover{
+            background-color:#272727;
+            height: auto;
+            transition: ease-in-out 0.5s;
+            border-radius: 10px;
+
+        }
+
+        .card:hover h4{
+            color: whitesmoke;
+            transition: ease-in-out 0.5s;
+            opacity: 1;
+        }
+
+        .special_card{
+            margin: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            max-width: 100%;
+            height: auto;
+            background-color: #ffe400;
+            overflow: hidden;
+            transition: ease-in-out 0.5s;
+
+            
+        }
+        .special_card:hover{
+            border-radius: 10px;
+            background-color: #272727;
+            height: auto;
+            transition: ease-in-out 0.5s;
+        }
+        .special_card:hover h4{
+            color: whitesmoke;
+            transition: ease-in-out 0.5s;
+            opacity: 1;
+        }
+
+        .container2{
+            display: flex;
+            justify-content: center;
+            overflow:hidden ;
+            background-color:  #272727;
+            transition: ease-in-out 0.5s;
+
+        }
+
+        .tony{
+            transition: ease-in-out 0.5s;
+            max-width: 100%;
+            height: auto;
+        }
+        #founder{
+
+        max-width: 100%;
+           height: 300px;
+           border-radius: 50%;
+           margin: 5px;
+        }
+        h5, h6{
+            text-align: center;
+            margin: 0;
+        }
+
+        .pf{
+            margin: 100px;
+        }
+
+        .foot{
+            background-color: #272727;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        a{  
+            margin: 10px;
+            font-size: 15px;
+            text-decoration: none;
+            color: whitesmoke;
+
+        }
+
+        .email{
+            color: whitesmoke;
+            position: absolute;
+             right: 10px;
+
+        }
+    
+    </style>
+<body>
+    <header>
+        <p >DEV SKETCH</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Reach Me</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <p class="title">SKETCHES</p>
+
+    <div class="container" >
+        <div class="card">
+            <img src="./imgs/Gandhi-1.png" alt="">
+            <h4>Gandi</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/-4.png" alt="">
+            <h4>Sanjay Dutt</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/sketch(3).png" alt="">
+            <h4>Old Women</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/sketch(4).png" alt="">
+            <h4>Chadwick Boseman</h4>
+        </div>
+
+        
+
+
+    </div>
+
+    <p class="title">CLIENTS</p>
+
+    
+    <div class="container">
+        
+
+        <div class="card">
+            <img src="./imgs/maysu.png" alt="">
+            <h4>Daw Aung San Suu Kyi</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/edited-2.png" alt="">
+            <h4>Client</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/sketch(2)-1.png" alt="">
+            <h4>LeBron James</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/niki2edited.png" alt="">
+            <h4>Client</h4>
+        </div>
+
+      
+    </div>
+
+
+    
+    <div class="container">
+        
+        <div class="card">
+            <img src="./imgs/nandini edited-01.png" alt="">
+            <h4>Client</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/-1(edited).jpg.png" alt="">
+            <h4>Client</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/simple-1 edited.jpg.png" alt="">
+            <h4>Client</h4>
+        </div>
+
+        <div class="card">
+            <img src="./imgs/devgir-2l.png" alt="">
+            <h4>Client</h4>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="special_card">
+            <img class="tony" src="./imgs/devsketch.png" alt="">
+            <h4>Tony Stark</h4>
+        </div>
+    </div>
+
+    <p class="title" style="font-size:30px ;">Team</p>
+    <div class="container">
+
+    <span class="pf">
+    <img id="founder"  src="./imgs/dev.png" alt="">
+    <h2 style="color:whitesmoke" class="title">Founder</h2>
+    <h5 style="color:whitesmoke"><b>Dev Gupta</b></h5>
+    <h6 style="color:whitesmoke;">Artist  </h6>
+    </span> 
+
+    <span class="pf">
+        <img id="founder"  src="./imgs/pf.png" alt="">
+        <h2 style="color:whitesmoke;" class="title">Co Founder</h2>
+        <h5 style="color: whitesmoke;"><b>Shwe Win Aung</b></h5>
+        <h6 style="color:whitesmoke ">Graphic Designer</h6>
+        <h6 style="font-size:15px; color:whitesmoke;" >Web Developer</h6>
+
+        </span> 
+
+</div>
+
+  <footer>
+    <div class="foot">
+        <a href="#">FAQ</a>
+        <a href="#">Suggestion</a>
+        <a href="#">Gallery</a>
+        <a href="#">Register</a>
+        <h5 class="email">Developed By NIKI | nickytwist70@gmail.com</h5>
+    </div>
+  </footer>  
+
+
+
+
+</body>
+
+</html>
