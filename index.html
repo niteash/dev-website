@@ -1,498 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap"
+      rel="stylesheet"
+    />
+
     <title>DEV SKETCH</title>
-</head>
-    <style>
+  </head>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
 
-@media only screen and (max-width: 600px){
+    @media only screen and (max-width: 600px) {
+      nav a {
+        margin: auto;
+      }
 
-            .container{
-                display: flex;
-                flex-wrap: wrap;
-                
-            }
-        }
+      .pf {
+        margin: 20px;
+      }
 
-        @media only screen and (max-width:600px) {
-            
-            nav a{
-                margin: auto;
-            }
+      #founder {
+        min-width: auto;
+        min-height: auto;
+      }
+    }
 
-            .pf{
-                margin: 20px;
-            }
+    @media only screen and (max-width: 1030px) {
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media only screen and (max-width: 1160px) {
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      #founder {
+        min-width: auto;
+        min-height: auto;
+      }
+    }
 
-            #founder{
-               min-width:auto;
-                min-height:auto;
-            }
-        }
+    @media only screen and (max-width: 600px) {
+      .foot a {
+        font-size: 10px;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .foot a {
+        font-size: 8px;
+      }
+      .email {
+        font-size: 8px;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      .foot a {
+        font-size: 6px;
+        font-weight: 800;
+      }
+      .email {
+        font-size: 6px;
+        font-weight: 800;
+      }
+      #founder {
+        max-width: 250px;
+        max-height: 250px;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      nav {
+        position: relative;
+        padding: auto;
+        margin: auto;
+        text-align: center;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+      nav a {
+        font-size: 11px;
+        padding: auto;
+        margin: auto;
+      }
 
-        @media only screen and (max-width:1030px){
-            .container{
-                display:flex;
-                flex-wrap: wrap;
-            }
-        }
-        @media only screen and (max-width:1160px){
-            .container{
-                display:flex;
-                flex-wrap: wrap;
-            }
-        }
-        @media only screen and (max-width:500px){
-            #founder{
-               min-width:auto;
-                min-height:auto;
-            }
-        }
+      #founder {
+        max-width: 150px;
+        max-height: 150px;
+      }
+      .pf {
+        margin: 60px;
+      }
+      .foot a {
+        font-size: 10px;
+      }
+      .email {
+        font-size: 6px;
+      }
+    }
+    @media only screen and (max-width: 370px) {
+      nav a {
+        position: relative;
+        padding: auto;
+      }
+    }
 
-        @media only screen and (max-width:700px){
-            .email{
-                font-size: 10px;
-            }
-        }
-        @media only screen and (max-width:600px){
-            .foot a{
-                font-size: 10px;
-            }
-        }
-        @media only screen and (max-width:400px){
-            .foot a{
-                font-size: 8px;
-            }
-            .email{
-                font-size: 8px;
-            }
-        }
-        @media only screen and (max-width:450px){
-            .foot a{
-                font-size: 6px;
-                font-weight: 800;
-            }
-            .email{
-                font-size: 6px;
-                font-weight: 800;
+    * {
+      cursor: pointer;
+      box-sizing: border-box;
+    }
 
-            }
-            #founder{
-            max-width:250px;
-            max-height:250px;
-            }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: #272727;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ffe400;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #ffe500;
+    }
+    body {
+      /* background-color: #272727; */
+      color: black;
+      max-height: 100%;
+      margin: 0;
+      font-family: ui-monospace;
+      user-select: none;
+      transition: ease-in-out 0.5s;
+      background-image:url(./svg/stacked-peaks-haikei.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height:100%;
+    }
+    header {
+      transition: ease-in-out 1s;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      /* background-color: #272727; */
+      padding: 40px;
+    }
+    header p {
+      font-size: 30px;
+      font-weight: 800;
+      color: whitesmoke;
+      text-align: center;
+      transition: ease-in-out 1s;
+    }
 
-        }
-        @media only screen and (max-width:700px){
-            nav{
-                position: relative;
-                padding:auto;
-                margin: auto;
-                text-align: center;
-            }
-        }
-        @media only screen and (max-width:420px){
-            nav a{
-                font-size: 11px;
-                padding:auto;
-                margin: auto;
-                
-            }
+    header p:hover {
+      color: #ffe400;
+      transition: ease-in-out 1s;
+    }
 
-            #founder{
-                max-width: 150px;
-                max-height: 150px;
-            }
-            .pf{
-                margin:60px;
+    nav {
+      /* background-color: #272727; */
+      padding: 20px;
+      transition: ease-in-out 0.8s;
+    }
+    nav a {
+      font-family: "Alumni Sans Pinstripe", sans-serif;
+      margin-left: 20px;
+      transition: ease-in-out 0.5s;
+      color: whitesmoke;
+      text-decoration: none;
+      padding: 10px 10px 10px 10px;
+      text-align: center;
+      font-weight: 700;
+    }
+    nav a:hover {
+      transition: ease-in-out 0.5s;
+      background-color: #ffe400;
+      color: black;
+      border-radius: 10px;
+      border: none;
+      width: 10px;
+    }
 
-            }
-            .foot a{
-                font-size: 10px;
-            }
-            .email{
-                font-size: 6px;
-            }
-        }
-        @media only screen and (max-width:370px){
-            nav a{
-                position: relative;
-                padding: auto;
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: whitesmoke;
+      font-weight: 700;
+      font-size: 25px;
+      quotes: "'" "'";
+      text-align: center;
+      margin: 5px;
+    }
 
-            }
-         
-        }
+    .box {
+      transition: ease-in-out 0.5s;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      /* background-color: #272727; */
+      justify-content: center;
+      align-items: center;
+    }
 
-       
-        *{
-            cursor: pointer;
-            box-sizing: border-box;
-        }
+    img {
+      object-fit: cover;
+      max-width: 100%;
+      height: 320px;
+    }
+    h4 {
+      font-size: small;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      transition: ease-in-out 0.5s;
 
-        ::-webkit-scrollbar{
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track{
-            background-color: #272727;
-        }
-        ::-webkit-scrollbar-thumb{
-            background-color: #ffe400;
-        }
-        ::-webkit-scrollbar-thumb:hover{
-            background-color: #ffe500;
+      margin: 0px;
+      opacity: 0;
+    }
+    .cards {
+      margin: 10px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      max-width: 100%;
+      height: 348px;
+      background-color: #ffe400;
+      background-color: #ffe400;
+      overflow: hidden;
+      transition: ease-in-out 0.5s;
+    }
+    .cards:hover {
+      background-color: #272727;
+      height: 348px;
+      transition: ease-in-out 0.5s;
+      border-radius: 10px;
+    }
 
-        }
-        body{
-            background-color:#272727;
-            color: black;
-            max-height: 100%;
-            margin: 0;
-            font-family: ui-monospace;
-            user-select: none;
-            transition: ease-in-out 0.5s;
+    .cards:hover h4 {
+      color: whitesmoke;
+      transition: ease-in-out 0.5s;
+      opacity: 1;
+      font-size: large;
+    }
 
-        }
-        header{
-            transition: ease-in-out 1s;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
-            background-color:#272727;
-            padding: 40px;
-        }
-        header p{
-            font-size: 30px;
-            font-weight: 800;
-            color: whitesmoke;
-            text-align: center;      
-            transition: ease-in-out 1s;
-            
-        }
+    .special_card {
+      margin: 10px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      max-width: 100%;
+      height: auto;
+      background-color: #ffe400;
+      overflow: hidden;
+      transition: ease-in-out 0.5s;
+    }
+    .special_card:hover {
+      border-radius: 10px;
+      background-color: #272727;
+      height: auto;
+      transition: ease-in-out 0.5s;
+    }
+    .special_card:hover h4 {
+      color: whitesmoke;
+      transition: ease-in-out 0.5s;
+      opacity: 1;
+      font-size: large;
+      margin: 5px;
+    }
 
-        header p:hover{
-            color: #ffe400;
-            transition: ease-in-out 1s;
-        
-        }
+    .box2 {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #272727;
+      transition: ease-in-out 0.5s;
+    }
 
-        nav{
-            background-color: #272727;
-            padding: 20px;
-            transition: ease-in-out 0.8s;
+    .tony {
+      transition: ease-in-out 0.5s;
+      max-width: 100%;
+      height: auto;
+    }
+    #founder {
+      max-width: 100%;
+      height: 300px;
+      border-radius: 50%;
+      margin: 5px;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
+    }
+    h5,
+    h6 {
+      text-align: center;
+      margin: auto;
+    }
 
-            
-        }
-        nav a{
-            font-family: 'Alumni Sans Pinstripe', sans-serif;
-            margin-left: 20px;
-            transition: ease-in-out 0.8s;
-            color: whitesmoke;
-            text-decoration: none;
-            padding: 10px 10px 10px 10px;
-            text-align: center;
-            font-weight: 700;
-            
-        }
-        nav a:hover{
-            transition: ease-in-out 0.8s;
-            background-color:#ffe400;
-            color:black;
-            border-radius: 10px;
-            border: none;
-            width: 10px;
-        
-        }
+    .pf {
+      margin: 100px;
+    }
 
-        .title{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: whitesmoke;
-            font-weight: 700;
-            font-size: 25px;
-            quotes: "'" "'";
-            text-align: center;
-            margin: 5px;
-        }
+    .foot {
+      background-color: #272727;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    a {
+      margin: 10px;
+      font-size: 15px;
+      text-decoration: none;
+      color: whitesmoke;
+    }
 
-        .container{
-            transition: ease-in-out 0.5s;
-            display: flex;
-            flex-direction: row;
-            width:100%;
-            height:auto;
-            background-color:#272727;
-            justify-content: center;
-            align-items: center;
-        }
+    .email {
+      color: whitesmoke;
+      position: absolute;
+      right: 10px;
+    }
 
-        img{
-            object-fit: cover;
-            max-width: 100%;
-            height: 320px;
-           
-        }
-        h4{
-          font-size: small;
-          color:whitesmoke;
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          transition: ease-in-out 0.5s;
-
-          margin: 0px;
-          opacity: 0;
-
-
-        }
-        .card{
-            margin: 10px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            max-width: 100%;
-            height: 348px;;
-            background-color:#ffe400;
-            overflow: hidden;
-            transition: ease-in-out 0.5s;
-
-            
-        }
-        .card:hover{
-            background-color:#272727;
-            height: 348px;
-            transition: ease-in-out 0.5s;
-            border-radius: 10px;
-
-        }
-
-        .card:hover h4{
-            color: whitesmoke;
-            transition: ease-in-out 0.5s;
-            opacity: 1;
-            font-size: large;
-        }
-
-        .special_card{
-            margin: 10px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            max-width: 100%;
-            height: auto;
-            background-color: #ffe400;
-            overflow: hidden;
-            transition: ease-in-out 0.5s;
-
-            
-        }
-        .special_card:hover{
-            border-radius: 10px;
-            background-color: #272727;
-            height: auto;
-            transition: ease-in-out 0.5s;
-        }
-        .special_card:hover h4{
-            color: whitesmoke;
-            transition: ease-in-out 0.5s;
-            opacity: 1;
-            font-size: large;
-            margin:5px;
-        }
-
-        .container2{
-            display: flex;
-            justify-content: center;
-            overflow:hidden ;
-            background-color:  #272727;
-            transition: ease-in-out 0.5s;
-
-        }
-
-        .tony{
-            transition: ease-in-out 0.5s;
-            max-width: 100%;
-            height: auto;
-        }
-        #founder{
-
-        max-width: 100%;
-           height: 300px;
-           border-radius: 50%;
-           margin: 5px;
-        }
-        h5, h6{
-            text-align: center;
-            margin: auto;
-        }
-
-        .pf{
-            margin: 100px;
-        }
-
-        .foot{
-            background-color: #272727;
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        a{  
-            margin: 10px;
-            font-size: 15px;
-            text-decoration: none;
-            color: whitesmoke;
-
-        }
-
-        .email{
-            color: whitesmoke;
-            position: absolute;
-             right: 10px;
-
-        }
-    
-    </style>
-<body>
+   
+  </style>
+  <body>
     <header>
-        <p >DEV SKETCH</p>
+      <p>DEV SKETCH</p>
     </header>
 
+
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="https://www.facebook.com/DevHandrawnSketch" target="_blank">Reach Me</a>
-        <a href="#" onclick="phNumber()">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="https://www.facebook.com/DevHandrawnSketch" target="_blank"
+        >Reach Me</a
+      >
+      <a href="#" onclick="phNumber()">Contact</a>
     </nav>
 
     <p class="title">SKETCHES</p>
 
-    <div class="container" >
-        <div class="card">
-            <img src="./imgs/Gandhi-1.png" alt="">
-            <h4>Gandi</h4>
-        </div>
+    <div class="box">
+      <div class="cards">
+        <img  loading="lazy" src="./imgs/Gandhi-1.png" alt="" />
+        <h4>Gandi</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/_4.png" alt="">
-            <h4>Sanjay Dutt</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/_4.png" alt="" />
+        <h4>Sanjay Dutt</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/sketch(3).png" alt="">
-            <h4>Old Women</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/sketch(3).png" alt="" />
+        <h4>Old Women</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/sketch(4).png" alt="">
-            <h4>Chadwick Boseman</h4>
-        </div>
-
-        
-
-
+      <div class="cards">
+        <img loading="lazy" src="./imgs/sketch(4).png" alt="" />
+        <h4>Chadwick Boseman</h4>
+      </div>
     </div>
 
     <p class="title">CLIENTS</p>
 
-    
-    <div class="container">
-        
+    <div class="box">
+      <div class="cards">
+        <img loading="lazy" src="./imgs/maysu.png" alt="" />
+        <h4>Daw Aung San Suu Kyi</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/maysu.png" alt="">
-            <h4>Daw Aung San Suu Kyi</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/edited-2.png" alt="" />
+        <h4>Client</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/edited-2.png" alt="">
-            <h4>Client</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/sketch(2)-1.png" alt="" />
+        <h4>LeBron James</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/sketch(2)-1.png" alt="">
-            <h4>LeBron James</h4>
-        </div>
-
-        <div class="card">
-            <img src="./imgs/niki2edited.png" alt="">
-            <h4>Client</h4>
-        </div>
-
-      
+      <div class="cards">
+        <img loading="lazy" src="./imgs/niki2edited.png" alt="" />
+        <h4>Client</h4>
+      </div>
     </div>
 
+    <div class="box">
+      <div class="cards">
+        <img loading="lazy" src="./imgs/nandini edited-01.png" alt="" />
+        <h4>Client</h4>
+      </div>
 
-    
-    <div class="container">
-        
-        <div class="card">
-            <img src="./imgs/nandini edited-01.png" alt="">
-            <h4>Client</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/_1(edited).jpg.png" alt="" />
+        <h4>Client</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/_1(edited).jpg.png" alt="">
-            <h4>Client</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/simple-1 edited.jpg.png" alt="" />
+        <h4>Client</h4>
+      </div>
 
-        <div class="card">
-            <img src="./imgs/simple-1 edited.jpg.png" alt="">
-            <h4>Client</h4>
-        </div>
-
-        <div class="card">
-            <img src="./imgs/devgir-2l.png" alt="">
-            <h4>Client</h4>
-        </div>
+      <div class="cards">
+        <img loading="lazy" src="./imgs/devgir-2l.png" alt="" />
+        <h4>Client</h4>
+      </div>
     </div>
 
-    <div class="container2">
-        <div class="special_card">
-            <img class="tony" src="./imgs/devsketch.png" alt="">
-            <h4>Tony Stark</h4>
-        </div>
+    <div class="box">
+      <div class="special_card">
+        <img loading="lazy" class="tony" src="./imgs/devsketch.png" alt="" />
+        <h4>Tony Stark</h4>
+      </div>
     </div>
 
-    <p class="title" style="font-size:30px ;">Team</p>
-    <div class="container">
+    <p class="title" style="font-size: 30px">Team</p>
+    <div class="box">
+      <span class="pf">
+        <img loading="lazy" id="founder" src="./imgs/dev.png" alt="" />
+        <h2 style="color: #272727" class="title">Founder</h2>
+        <h5 style="color: #272727"><b>Dev Gupta</b></h5>
+        <h6 style="color: #272727">Artist</h6>
+      </span>
 
-    <span class="pf">
-    <img id="founder"  src="./imgs/dev.png" alt="">
-    <h2 style="color:whitesmoke" class="title">Founder</h2>
-    <h5 style="color:whitesmoke"><b>Dev Gupta</b></h5>
-    <h6 style="color:whitesmoke;">Artist  </h6>
-    </span> 
+      <span class="pf">
+        <img loading="lazy" id="founder" src="./imgs/pf.png" alt="" />
+        <h2 style="color: #272727" class="title">Co Founder</h2>
+        <h5 style="color: #272727"><b>Shwe Win Aung</b></h5>
+        <h6 style="color: #272727">Graphic Designer</h6>
+        <h6 style="color: #272727">Web Developer</h6>
+      </span>
+    </div>
 
-    <span class="pf">
-        <img id="founder"  src="./imgs/pf.png" alt="">
-        <h2 style="color:whitesmoke;" class="title">Co Founder</h2>
-        <h5 style="color: whitesmoke;"><b>Shwe Win Aung</b></h5>
-        <h6 style="color:whitesmoke ">Graphic Designer</h6>
-        <h6 style=" color:whitesmoke;" >Web Developer</h6>
-
-        </span> 
-
-</div>
-
-  <footer>
-    <div class="foot">
+    <footer>
+      <div class="foot">
         <a href="#">FAQ</a>
         <a href="#">Suggestion</a>
         <a href="#">Gallery</a>
         <a href="#">Register</a>
         <h5 class="email">nickytwist70@gmail.com</h5>
-    </div>
-  </footer>  
-
-
-
-
-</body>
-<script>
-    function phNumber(){
-        alert("09882866298");
-    };
-</script>
+      </div>
+    </footer>
+  </body>
+  <script src="../sass-test/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script>
+    function phNumber() {
+      alert("09882866298");
+    }
+  </script>
 </html>
